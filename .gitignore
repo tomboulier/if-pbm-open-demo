@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Generated demo artifacts
+data/
+*.duckdb
+*.duckdb.wal
+
+# Docs build
+site/
+
+# Internal source material (repo is intended to be public). The shareable, aggregated
+# calibration targets are committed at src/if_pbm_open_demo/data/targets.csv instead.
+documentation/

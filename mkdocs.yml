@@ -1,0 +1,18 @@
+site_name: If-PBM Open Demo
+site_description: Reproducible open-source demo of the If-PBM PBM monitoring method
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+
+nav:
+  - Home: index.md
