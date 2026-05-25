@@ -18,3 +18,16 @@ site/
 # Internal source material (repo is intended to be public). The shareable, aggregated
 # calibration targets are committed at src/if_pbm_open_demo/data/targets.csv instead.
 documentation/
+
+# Agent / IDE OpenSpec scaffolding (kept local, not shared)
+.agent/
+.claude/
+.codex/
+.cursor/
+.kilocode/
+.kiro/
+.opencode/
+.windsurf/
+.github/copilot-instructions.md
+.github/prompts/
+.github/skills/
