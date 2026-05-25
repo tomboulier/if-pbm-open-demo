@@ -8,7 +8,7 @@ __pycache__/
 .pytest_cache/
 
 # Generated demo artifacts
-data/
+/data/
 *.duckdb
 *.duckdb.wal
 
