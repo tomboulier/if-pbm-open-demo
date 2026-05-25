@@ -1,6 +1,6 @@
 # If-PBM Open Demo
 
-![CI](https://github.com/thomas-boulier/if-pbm-open-demo/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/tomboulier/if-pbm-open-demo/actions/workflows/ci.yml/badge.svg)
 
 Reproducible, open-source demo of the **If-PBM** Patient Blood Management (PBM) monitoring
 method described in the MIE2026 short communication *"Monitoring adherence to PBM guidelines
@@ -8,7 +8,7 @@ from clinical data warehouse: a case study"* (Beaudoin, Godon, Marquet, Boulier,
 Moreau-Gaudry, Grenoble Alpes University Hospital).
 
 It generates **synthetic** clinical data, computes the **five If-PBM indicators (IR1-IR5)**
-across orthopedics, cardiology, and gynecology by quarter, and serves an interactive
+across orthopedics, cardiology, and gynecology by trimester, and serves an interactive
 dashboard. No real patient data is involved.
 
 ## What it shows
@@ -40,10 +40,10 @@ The method is decoupled behind two stable seams (ports), so inputs and outputs a
 
 ```bash
 # Recommended: uv
-uv tool install git+https://github.com/thomas-boulier/if-pbm-open-demo
+uv tool install git+https://github.com/tomboulier/if-pbm-open-demo
 
 # Or from a clone, for development
-git clone https://github.com/thomas-boulier/if-pbm-open-demo
+git clone https://github.com/tomboulier/if-pbm-open-demo
 cd if-pbm-open-demo
 uv sync
 ```

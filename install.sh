@@ -1,9 +1,9 @@
 #!/bin/sh
 # Install the if-pbm-open-demo CLI from GitHub.
-# Usage: curl -sSf https://raw.githubusercontent.com/thomas-boulier/if-pbm-open-demo/main/install.sh | sh
+# Usage: curl -sSf https://raw.githubusercontent.com/tomboulier/if-pbm-open-demo/main/install.sh | sh
 set -eu
 
-REPO="git+https://github.com/thomas-boulier/if-pbm-open-demo"
+REPO="git+https://github.com/tomboulier/if-pbm-open-demo"
 
 if command -v uv >/dev/null 2>&1; then
     echo "Installing if-pbm-open-demo with uv..."

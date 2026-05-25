@@ -4,12 +4,12 @@ Reproducible, open-source demo of the If-PBM Patient Blood Management monitoring
 (MIE2026 short communication, Grenoble Alpes University Hospital).
 
 It generates synthetic clinical data, computes the five If-PBM indicators (IR1-IR5) by
-specialty and quarter, and serves an interactive dashboard. All data is synthetic.
+specialty and trimester, and serves an interactive dashboard. All data is synthetic.
 
 ## Quick start
 
 ```bash
-uv tool install git+https://github.com/thomas-boulier/if-pbm-open-demo
+uv tool install git+https://github.com/tomboulier/if-pbm-open-demo
 if-pbm-demo demo
 ```
 
@@ -27,4 +27,4 @@ if-pbm-demo demo
 
 The method is decoupled behind two seams: a canonical input schema and an
 `indicator_results` output mart, so data sources and dashboards are swappable. See the
-[README](https://github.com/thomas-boulier/if-pbm-open-demo) for details.
+[README](https://github.com/tomboulier/if-pbm-open-demo) for details.
