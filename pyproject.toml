@@ -37,6 +37,10 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/if_pbm_open_demo"]
+include = [
+    "src/if_pbm_open_demo/**/*.csv",
+    "src/if_pbm_open_demo/**/*.sql",
+]
 
 [tool.ruff]
 line-length = 88
