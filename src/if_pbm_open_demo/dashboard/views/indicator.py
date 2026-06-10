@@ -83,18 +83,14 @@ def make_page(indicator: Indicator) -> Callable[[], None]:
             st.markdown("#### Trend by trimester, with year-2 targets")
             fig = components.trend_figure(indicator, results, periods, specialties)
             fig.update_layout(height=380)
-            st.plotly_chart(
-                fig, use_container_width=True, config={"displayModeBar": False}
-            )
+            st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
 
         chart_col, def_col = st.columns([1.4, 1])
         with chart_col, st.container(key=f"panel-latest-{indicator.key}"):
             st.markdown(f"#### Latest period ({latest}) by specialty")
             bar = components.latest_bar_figure(indicator, results, latest, specialties)
             bar.update_layout(height=300)
-            st.plotly_chart(
-                bar, use_container_width=True, config={"displayModeBar": False}
-            )
+            st.plotly_chart(bar, width="stretch", config={"displayModeBar": False})
         with def_col:
             _definition_card(indicator)
 
@@ -105,7 +101,7 @@ def make_page(indicator: Indicator) -> Callable[[], None]:
             ]
             st.dataframe(
                 sub[["specialty", "period", "numerator", "denominator", "proportion"]],
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
 

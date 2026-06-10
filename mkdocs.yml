@@ -1,4 +1,4 @@
-site_name: If-PBM Open Demo
+site_name: If-PBM Open Platform
 site_description: Reproducible open-source demo of the If-PBM PBM monitoring method
 theme:
   name: material
@@ -16,3 +16,4 @@ plugins:
 
 nav:
   - Home: index.md
+  - Platform plan: platform-plan.md

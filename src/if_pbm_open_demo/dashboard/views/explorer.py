@@ -71,7 +71,7 @@ def render() -> None:
         table = st.selectbox("Table", list(_TABLE_BLURBS), key="explorer_table")
         st.dataframe(
             data.table_preview(path, table),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -89,5 +89,5 @@ def render() -> None:
             except Exception as exc:  # noqa: BLE001 - surfaced to the learner
                 st.error(f"Query failed: {exc}")
             else:
-                st.dataframe(result, use_container_width=True, hide_index=True)
+                st.dataframe(result, width="stretch", hide_index=True)
                 st.caption(f"{len(result):,} rows")

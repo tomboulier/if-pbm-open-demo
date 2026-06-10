@@ -100,9 +100,7 @@ def render() -> None:
         with tab, st.container(key=f"panel-calib-{indicator.key}"):
             st.markdown(f"#### {indicator.key} · {by_key(indicator.key).title}")
             fig = _comparison_figure(indicator.key, synthetic, real, periods)
-            st.plotly_chart(
-                fig, use_container_width=True, config={"displayModeBar": False}
-            )
+            st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
 
     st.markdown("")
     left, right = st.columns([1.2, 1])
@@ -111,7 +109,7 @@ def render() -> None:
         gaps = _gap_table(synthetic, real)
         st.dataframe(
             gaps.style.format({"mean abs. gap": "{:.1%}", "max abs. gap": "{:.1%}"}),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
         st.caption(
@@ -128,7 +126,7 @@ def render() -> None:
         ]
         st.dataframe(
             annual.style.format("{:.1%}", na_rep="censored"),
-            use_container_width=True,
+            width="stretch",
         )
         st.caption(
             "Gynecology volumes are too small for quarterly reporting; the real "

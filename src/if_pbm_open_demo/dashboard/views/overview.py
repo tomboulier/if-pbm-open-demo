@@ -36,9 +36,7 @@ def _cohort_card(cohort: pd.DataFrame) -> None:
             margin={"l": 0, "r": 0, "t": 10, "b": 0},
         )
         theme.style_card_figure(donut)
-        st.plotly_chart(
-            donut, use_container_width=True, config={"displayModeBar": False}
-        )
+        st.plotly_chart(donut, width="stretch", config={"displayModeBar": False})
         st.caption(
             "Synthetic cohort calibrated on the real bilan; the generator "
             "draws one synthetic patient per surgery."
@@ -88,7 +86,7 @@ def _kpi_row(results: pd.DataFrame, periods: list[str]) -> None:
                 st.page_link(
                     page_refs[indicator.key],
                     label=f"Open {indicator.key}",
-                    use_container_width=True,
+                    width="stretch",
                 )
 
 
@@ -102,9 +100,7 @@ def _trend_grid(results: pd.DataFrame, periods: list[str]) -> None:
                 st.markdown(f"#### {indicator.key} · {indicator.title}")
                 fig = components.trend_figure(indicator, results, periods, specialties)
                 fig.update_layout(height=260, showlegend=False)
-                st.plotly_chart(
-                    fig, use_container_width=True, config={"displayModeBar": False}
-                )
+                st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
 
 
 def render() -> None:

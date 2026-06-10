@@ -1,10 +1,17 @@
-# If-PBM Open Demo
+# If-PBM Open Platform
 
-Reproducible, open-source demo of the If-PBM Patient Blood Management monitoring method
-(MIE2026 short communication, Grenoble Alpes University Hospital).
+Reproducible, open-source platform around the If-PBM Patient Blood Management
+monitoring method (MIE2026 short communication, Grenoble Alpes University Hospital).
 
-It generates synthetic clinical data, computes the five If-PBM indicators (IR1-IR5) by
-specialty and trimester, and serves an interactive dashboard. All data is synthetic.
+A synthetic clinical data warehouse, calibrated on the real aggregated If-PBM bilan,
+feeds three surfaces:
+
+- **Dashboards** generated automatically from the indicator registry (IR1-IR5 by
+  specialty and trimester, with the year-2 targets of the cahier des charges).
+- **Calibration**: the official real aggregated values overlaid on the synthetic
+  pipeline, making the known-ground-truth claim visible.
+- **Learn**: a self-correcting SQL training track on the warehouse, validated against
+  the ground truth.
 
 ## Quick start
 
@@ -26,5 +33,8 @@ if-pbm-demo demo
 ## Architecture
 
 The method is decoupled behind two seams: a canonical input schema and an
-`indicator_results` output mart, so data sources and dashboards are swappable. See the
-[README](https://github.com/tomboulier/if-pbm-open-demo) for details.
+`indicator_results` output mart, so data sources and dashboards are swappable. The
+indicator **registry** is the single source of truth for definitions, targets, and SQL;
+dashboards and exercise validation derive from it. See the
+[README](https://github.com/tomboulier/if-pbm-open-demo) and the
+[platform plan](platform-plan.md) for details.
