@@ -14,8 +14,8 @@ from .pipeline import DEFAULT_DB_PATH, build, compute, generate_database
 
 def _launch_dashboard(db_path: Path) -> int:
     env = dict(os.environ, IF_PBM_DB=str(db_path))
-    dashboard = resources.files(__package__).joinpath("dashboard.py")
-    with resources.as_file(dashboard) as path:
+    app = resources.files(f"{__package__}.dashboard").joinpath("app.py")
+    with resources.as_file(app) as path:
         return subprocess.call(
             [sys.executable, "-m", "streamlit", "run", str(path)], env=env
         )
